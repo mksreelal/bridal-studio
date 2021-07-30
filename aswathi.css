@@ -1,5 +1,60 @@
 *{
-	width: 100%;
-	height: 100%;
-	background-color: red;
+	margin: 0;
+	padding: 0;
+	background-color: white#;
+}
+#home .top img{
+	height: 100px;
+	width: 100px;
+	padding-left: 30px;
+	padding-top: 20px;
+}
+#home{
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	background-color: #f9f9f9;
+
+}
+#home .right{
+	display: flex;
+	width: 600px;
+	padding-top: 30px;
+	padding-right: 20px;
+
+	background-color: burlywood;
+	align-items: right;
+}
+#home .top{
+	width: 800px;
+}
+#home .home{
+	padding: 20px;
+	padding-left: 180px;
+}
+#home .about{
+	padding: 20px;
+}
+#home .gallery{
+	padding: 20px;
+}
+#home .contact{
+	padding: 20px;
+}
+h1{
+	padding-top: 60px;
+	padding-left: 40px;
+}
+h2{
+	padding-top: 20px;
+	padding-left: 40px;
+}
+.img img{
+	padding-top: 30px;
+	padding-left: 10px;
+	
+	height: 400px;
+	width: 300px;
+	display: flex;
+	justify-content: space-evenly;
 }

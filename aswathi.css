@@ -1,475 +1,115 @@
-@font-face {
-    font-family: 'cormorant_garamondlight';
-    src: url('./fonts/font1/cormorantgaramond-light-webfont.woff2') format('woff2'),
-         url('./fonts/font1/cormorantgaramond-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+/* /* 
 
+/* main */
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
-
-
-
-
-@font-face {
-    font-family: 'cormorant_garamondregular';
-    src: url('./fonts/font1/cormorantgaramond-regular-webfont.woff2') format('woff2'),
-         url('./fonts/font1/cormorantgaramond-regular-webfont/.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+body {
+  width: 100%;
+  margin: 0 10px;
+  background-color: #f5f5f5;
 }
-
-
-
-@font-face {
-    font-family: 'roboto_monoregular';
-    src: url('./fonts/font2/robotomono-variablefont_wght-webfont.woff2') format('woff2'),
-         url('robotomono-variablefont_wght-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+/* .wrapper {
+  max-width: 1100px;
+  margin: 0px auto;
+  background-color: #f5f5f5;
+} */
+/* nav */
+#home .nav-container {
+  width: 100%;
+  min-height: 5vh;
+  display: flex;
+  align-items: center;
 }
-
-
-@font-face {
-    font-family: 'baloo_2regular';
-    src: url('baloo2-regular-webfont.woff2') format('woff2'),
-         url('baloo2-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+#home .nav-container nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
-
-
-
-
-
-
-
-
-
-*{
-	margin: 0;
-	padding: 0;
-	background-color: whitesmoke;
-	text-decoration: none;
+#home .nav-container nav .nav-left img {
+  display: block;
+  width: 30px;
 }
-#home .top img{
-	height: 60px;
-	width: 60px;
-	padding-left: 80px;
-	padding-top: 40px;
+#home .nav-container nav .humburgar {
+  width: 20px;
+  height: 20px;
 }
-#home{
-	width: 100vw;
-	
-	display: flex;
-	flex-direction: row;
-	background-color: #f9f9f9;
-
+#home .nav-container nav .humburgar .line {
+  width: 100%;
+  height: 3px;
+  background-color: #997950;
+  margin: 5px;
 }
-#home .right{
-	height: 600px;
-	display: flex;
-	width: 600px;
-	padding-top: 30px;
-	padding-right: 90px;
-
-	font-size: 28px;
-	align-items: right;
+#home .nav-container nav .nav-right ul {
+  display: none;
+} */
+/* #home .nav-container nav .nav-right ul {
+  display: flex;
 }
-#home .top{
-	width: 800px;
+#home .nav-container nav .nav-right ul li {
+  font-family: "cormorant_garamondlight";
+  list-style: none;
+  padding: 0 20px;
 }
-#home .right{
- background-image: url(./assets/img.jpeg) ;
- background-image: no-repeat;
- background-position: center ;
- background-size: cover;
+#home .nav-container nav .nav-right ul li:last-child {
+  padding-right: 0px;
 }
-#home .home{
-	font-family: 'cormorant_garamondlight';
-	color: #997950;
-	height: 30px;
-	padding: 20px;
-	padding-left: 120px;
+#home .nav-container nav .nav-right ul li a {
+  color: #997950;
+  font-size: 20px;
+  font-weight: 600;
+} */
+
+/* spotlight  */
+
+/* #home .spotlight {
+  display: flex;
+  margin-top: 7%;
+  justify-content: space-between;
+  padding: 20px;
 }
-#home .about{
-	font-family: 'cormorant_garamondlight';
-	
-	height: 30px;
-	display: block;
-	padding: 20px;
+#home .spotlight .social-bar {
+  height: 80vh;
+  width: 50px;
+  background-color: #b17769;
 }
-#home .gallery{
-	font-family: 'cormorant_garamondlight';
-	
-	height: 30px;
-	padding: 20px;
+#home .spotlight .right {
+  width: 500px;
+  height: 500px;
+  background-image: url("./assets/img.jpeg");
+  background-size: cover;
 }
-#home .contact{
-	font-family: 'cormorant_garamondlight';
-		
-	height: 30px;
-	padding: 20px;
+#home .spotlight .left {
+  z-index: 2;
+  font-family: "cormorant_garamondlight";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.aswathi{
-	 font-family: 'cormorant_garamondlight';
-	 font-size: 90px;
-	 letter-spacing: 15px;
-	 font-weight: 200;
-	
-	padding-top: 70px;
-	padding-left: 80px;
-	color: #997950;
+#home .spotlight .left h1,
+#home .spotlight .left h4 {
+  font-size: 90px;
+  letter-spacing: 3px;
+  color: #997950;
+  font-weight: 400;
 }
-h5{
-	font-family: 'cormorant_garamondlight';
-	font-size: 50px;
-	letter-spacing: 10px;
-	font-weight: 200;
-	color: #997950;
-	padding-top: px;
-	padding-left: 80px;
+#home .spotlight .left .top {
+  flex: 2;
 }
-h6{
-	font-family: 'cormorant_garamondlight';
-	padding-top: 100px;
-	padding-left: 80px;
-	font-size: 20px;
-	color: #997950;
-	letter-spacing: 9px;
-
+#home .spotlight .left h4 {
+  font-size: 35px;
 }
-h4{
-	font-family: 'cormorant_garamondlight';
-	padding-top: 10px;
-	padding-left: 80px;
-	font-size: 20px;
-	color: #997950;
-	letter-spacing: 9px;
+#home .spotlight .left p {
+  font-weight: 900;
+  color: #997950;
+  flex: 2;
 }
-a{
-	color: #997950 ;
+#home .spotlight .left .icon span img {
+  width: 20px;
 }
-.arrow img{
-	width: 50px;
-}
-
-
-
-
-
-
-#about{
-	display: flex;
-	flex-direction: row;
-
-}
-#about .img1 img{
-	display: flex;
-	width: 300px;
-	height: 330px;
-	padding-left: 110px;
-	padding-top: 100px;
-	
-}
-
-.about{
-	display: flex;
-	flex-direction: column;
-	
-	padding-left: 90px;
-	padding-top: 40px;
-	
-		width: 700px;
-	
-}
-.about1{
-	font-family: 'cormorant_garamondlight';
-	color: #997950;
-	font-size: 60px;
-	font-weight: 600;	
-
-}
-.about2{
-
-	color: #997950;
-	font-size: 30px;
-	font-weight: 550;
-
-}
-.about3{
-	
- font-family: 'roboto_monoregular';
-	color: #4a2511;
-	font-size: 18px;
-	padding-top: 20px;
-	letter-spacing: 2px;
-	line-height: 25px;
-	font-weight:100;
-		background-image: url(./assets/bg.png);
-		background-position: center;
-		background-size: 450px;
-		background-repeat: no-repeat;
-		
-
-}
-.about4{
-	padding-top: 90px;
-
-	
-	text-align: center;
-}
-button{
-	padding: 10px;
-	border: none;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #fc46aa;
-	letter-spacing: 6px;
-	align-content: center;
-	background: none;
-	color: #4a2511;
-	font-family: roboto_monoregular;
-}
-
-
-
-
-
-#gallery{
-	height: 100vh;
-}
-
-
-
-
-
-#contact{
-	height: 100vh;
-	display: flex;
-	flex-direction: row;
-
-}
-.contact1 img{
-	width: 400px;
-	padding-left: 60px;
-	padding-top: 100px;
-}
-h3{
-	font-family:'cormorant_garamondlight' ;
-	font-size: 50px;
-	padding-bottom: 60px;
-	padding-top: 100px;
-}
-.contact2 p{
-	padding-left: 70px;
-	font-size: 18px;
-	font-family: "baloo_2regular";
-}
-.contact2 img{
-	height: 25px;
-	padding-top: 10px;
-
-}
-.contact2 a{
-	padding-right: 30px;
-
-}
-
-.contact3 img{
-	display: flex;
-	width: 400px;
-	justify-content: ;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-#about1{
-	display: flex;
-	flex-direction: row;
-}
-.about5{
-	display: flex;
-	height: 400px;
-
-	padding-top: 90px;
-}
-.about6{
-	text-align: left;
-	padding-top: 130px;
-	font-family: 'baloo_2regular';
-	
-	font-size: 20px;
-	color: #4a2511;
-	letter-spacing: 3px;
-	line-height: 38px;
-
-
-}
-.about7 img{
-	opacity: 0.8;
-	width: 350px;
-}
-.about6 p{
-	background-image: url(./assets/bg.png);
-	background-position: center;
-	background-size: 450px;
-	background-repeat: no-repeat;
-		
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ */

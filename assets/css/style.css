@@ -178,6 +178,9 @@ nav h1.left img {
   z-index: 2;
   padding: 20px;
   background-color: rgb(16 16 16 / 56%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #home .spotlight .cards .card h1 {
   font-size: 28px;
@@ -523,5 +526,25 @@ footer .content .right span {
   }
   .nav-links .link {
     font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #contact .main .address .add {
+    margin-left: 60%;
+    transform: translate(-60%);
+    -webkit-transform: translate(-60%);
+    -moz-transform: translate(-60%);
+    -ms-transform: translate(-60%);
+    -o-transform: translate(-60%);
+  }
+}
+
+@media screen and (min-width: 980px) {
+  #home .spotlight .cards {
+    margin: 10% 0;
+  }
+  #home .spotlight .cards .card {
+    width: 200px;
   }
 }

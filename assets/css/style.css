@@ -59,9 +59,9 @@ nav h1.left img {
   width: 40px;
 }
 .humburgar .line {
-  width: 30px;
-  height: 3px;
-  background-color: #8d6d43;
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
   margin: 15px 0;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -215,7 +215,6 @@ nav h1.left img {
 }
 #about h1.hehe {
   font-size: 34px;
-  color: #cc872c;
   font-family: "cormorant_garamondlight";
   text-align: center;
 
@@ -232,7 +231,6 @@ nav h1.left img {
 }
 #about .main {
   position: relative;
-  color: #8d6d43;
 }
 #about .main h1 {
   font-family: "cormorant_garamondlight";
@@ -247,7 +245,7 @@ nav h1.left img {
   font-size: 16px;
   max-width: 400px;
   margin: 30px 0;
-  color: rgba(255, 255, 255, 0.315);
+  color: rgba(255, 255, 255, 0.61);
   font-weight: 500;
 }
 #about .main a.button {
@@ -272,7 +270,6 @@ nav h1.left img {
   overflow: hidden;
   margin: 15% 0;
   height: 100vh;
-  color: #8f6734;
 }
 #gallery .head {
   margin-top: 10vh;
@@ -325,17 +322,8 @@ nav h1.left img {
   margin: 20% 0;
   position: relative;
 }
-.hehe3 {
-  width: 300px;
-  height: 300px;
-  opacity: 0.5;
-  /* background-image: url("/assets/brush.png"); */
-  background-size: cover;
-  position: absolute;
-  right: 0px;
-  bottom: 5vh;
-}
 #contact .main h1 {
+  padding: 5vh 0;
   font-size: 34px;
 }
 #contact .main .address .add {

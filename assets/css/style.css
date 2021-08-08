@@ -1,0 +1,618 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
+
+@font-face {
+  font-family: "roboto_monoregular";
+  src: url("./fonts/font3/robotomono-variablefont_wght-webfont.woff")
+      format("woff2"),
+    url("./fonts/font3/robotomono-variablefont_wght-webfont.woff2")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "baloo_2regular";
+  src: url("./fonts/font4/baloo2-regular-webfont.woff") format("woff2"),
+    url("./fonts/font4/baloo2-regular-webfont.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 60%;
+  font-family: sans-serif;
+  background-color: #b02757;
+  color: rgba(255, 255, 255, 0.89);
+}
+.wrapper {
+  margin: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+/* nav section */
+.nav-container {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 10px 14px -12px #000;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+nav h1.left img {
+  width: 40px;
+}
+.humburgar .line {
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  margin: 15px 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.humburgar .line:nth-child(1) {
+  position: absolute;
+  right: -10px;
+  top: 9px;
+}
+.humburgar {
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  cursor: pointer;
+}
+.nav-links {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  top: 50px;
+  right: 30px;
+  background-color: #0c0c0bf2;
+  padding: 30%;
+  width: 80%;
+  height: 70vh;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.nav-links.open {
+  opacity: 1;
+  pointer-events: all;
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  z-index: 500;
+}
+.nav-links li {
+  list-style: none;
+  font-size: 20px;
+  padding: 20px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.445);
+  opacity: 0;
+}
+.overlay.open {
+  opacity: 1;
+  z-index: 100;
+}
+.nav-links::before {
+  content: "Aswathi";
+  font-size: 25px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  font-family: "Alex Brush", cursive;
+  font-weight: 900;
+  color: #fff;
+}
+
+/* spotlight */
+#home .spotlight {
+  margin-top: 30%;
+  text-align: center;
+  font-family: "cormorant_garamondlight";
+  margin-bottom: 26vh;
+}
+#home .spotlight h1.head {
+  font-size: 44px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+#home .spotlight h4 {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.664);
+}
+#home .spotlight p.content {
+  font-size: 15px;
+  max-width: 80%;
+  margin: 30px auto;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.438);
+}
+#home .spotlight .cards {
+  margin: 20% 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+#home .spotlight .cards .card {
+  width: 150px;
+  border-bottom: 2px solid #000;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-family: sans-serif;
+  z-index: 2;
+  padding: 20px;
+  background-color: rgb(16 16 16 / 56%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#home .spotlight .cards .card h1 {
+  font-size: 28px;
+}
+#home .spotlight .cards .card h5 {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  max-width: 100px;
+}
+/* about */
+
+#about {
+  position: relative;
+  margin: 10% 0;
+}
+#about h1.hehe {
+  font-size: 16px;
+  font-family: sans-serif;
+  margin: 8vh 0;
+}
+#about h1.hehe::before {
+  content: ":";
+  width: 10px;
+  height: 5px;
+  background-color: #5d5d47;
+  color: #5d5d47;
+  margin-right: 5px;
+}
+#about .main {
+  position: relative;
+}
+#about .main h1 {
+  font-family: "cormorant_garamondlight";
+  font-size: 30px;
+}
+#about .main h4 {
+  font-size: 22px;
+  font-family: "cormorant_garamondlight";
+  margin-bottom: 10px;
+}
+#about .main p {
+  font-size: 16px;
+  max-width: 400px;
+  margin: 30px 0;
+  color: rgba(255, 255, 255, 0.61);
+  font-weight: 500;
+  background-image: url(./assets/bg.png);
+}
+#about .main a.button {
+  display: inline-block;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  font-size: 15px;
+  border: 1px solid #8d6d43;
+  padding: 10px 20px;
+  font-weight: 700;
+}
+
+/* swiper */
+#gallery {
+  width: 100%;
+  overflow: hidden;
+  margin: 15% 0;
+  height: 100vh;
+}
+#gallery .head {
+  margin-top: 10vh;
+  text-align: center;
+}
+#gallery .head h1 {
+  font-size: 16px;
+  font-family: sans-serif;
+  margin: 8vh 0;
+  text-align: left;
+}
+#gallery .head h1::before {
+  content: ":";
+  width: 10px;
+  height: 5px;
+  background-color: yellow;
+  color: yellow;
+  margin-right: 5px;
+}
+#gallery .head h3 {
+  font-size: 22px;
+  font-family: "Alex Brush", cursive;
+  font-weight: 900;
+}
+.swiper-container {
+  margin-top: 10vh;
+  width: 320px;
+  height: 400px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #000;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* contact section */
+#contact {
+  text-align: center;
+  margin: 20% 0;
+  position: relative;
+}
+#contact .main h1 {
+  font-size: 16px;
+  font-family: sans-serif;
+  margin: 8vh 0;
+  text-align: left;
+}
+#contact .main h1::before {
+  content: ":";
+  width: 10px;
+  height: 5px;
+  background-color: rgb(255, 0, 0);
+  color: red;
+  margin-right: 5px;
+}
+#contact .main .address .add {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  justify-content: space-between;
+  min-height: 20vh;
+}
+#contact .main .address .add a {
+  display: flex;
+  gap: 40px;
+  font-weight: 900;
+  opacity: 0.8;
+  font-size: 11px;
+}
+#contact .main .address .add span img {
+  width: 20px;
+}
+#contact .main .address .chat {
+  margin-left: -50px;
+}
+#contact .main .address .chat a.button {
+  padding: 10px;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.616);
+  color: rgba(255, 255, 255, 0.747);
+  font-size: 1.5em;
+  background: rgb(39, 156, 9);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-top: 50px;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+#contact .main .address .chat a.button::after {
+  content: "WhatsApp";
+  padding: 8px 16px;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.616);
+  color: rgba(255, 255, 255, 0.747);
+  font-size: 1em;
+  background: rgb(39, 156, 9);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: absolute;
+  top: 8px;
+  left: 30px;
+  z-index: -1;
+}
+#contact .main .address .chat a.button img {
+  display: block;
+  width: 100%;
+}
+#contact .main .mail {
+  margin-top: 50px;
+  padding: 10px;
+  margin: 20px;
+}
+#contact .main .mail input[type="text"] {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.562);
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+#contact .main .mail input[type="text"]::placeholder {
+  color: silver;
+}
+#contact .main .mail a.button {
+  display: inline-block;
+  background: rgb(15, 76, 245);
+  font-weight: 700;
+  padding: 13px 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* footer */
+
+footer {
+  height: 10vh;
+  background: rgba(75, 75, 75, 0.527);
+}
+footer .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  font-size: 1.2em;
+}
+footer .content .right span {
+  font-family: "Alex Brush", cursive;
+}
+@media screen and (min-width: 480px) {
+  #home .spotlight {
+    margin-top: 10%;
+  }
+
+  #home .spotlight .cards .card {
+    width: 170px;
+  }
+
+  .nav-links {
+    height: 80vh;
+  }
+  /* about */
+  #about .main {
+    text-align: center;
+  }
+  #about .main p {
+    margin: 0 auto;
+  }
+
+  /* contact */
+  #contact .main .address .add {
+    margin-left: 55%;
+    transform: translate(-60%);
+    -webkit-transform: translate(-60%);
+    -moz-transform: translate(-60%);
+    -ms-transform: translate(-60%);
+    -o-transform: translate(-60%);
+  }
+}
+@media screen and (min-width: 640px) {
+  .humburgar {
+    display: none;
+  }
+  .overlay {
+    display: none;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .nav-container {
+    height: 10vh;
+    position: static;
+    top: 0;
+    right: 10px;
+    left: 10px;
+  }
+  .nav-links {
+    opacity: 1;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    top: 0;
+    right: 0px;
+    padding: 0px;
+    height: auto;
+    width: auto;
+    pointer-events: all;
+  }
+  .nav-links::before {
+    content: "";
+  }
+  .nav-links .link {
+    font-size: 15px;
+  }
+  .swiper-container {
+    width: 380px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #contact .main .address .add {
+    margin-left: 60%;
+    transform: translate(-60%);
+    -webkit-transform: translate(-60%);
+    -moz-transform: translate(-60%);
+    -ms-transform: translate(-60%);
+    -o-transform: translate(-60%);
+  }
+  .wrapper {
+    margin: 0 90px;
+  }
+  .swiper-container {
+    width: 420px;
+    height: 460px;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  #home .spotlight .cards {
+    margin: 10% 0;
+  }
+  #home .spotlight .cards .card {
+    width: 200px;
+  }
+  #contact .main .address .add {
+    margin-left: 63%;
+    transform: translate(-63%);
+    -webkit-transform: translate(-63%);
+    -moz-transform: translate(-63%);
+    -ms-transform: translate(-63%);
+    -o-transform: translate(-63%);
+  }
+  .swiper-container {
+    width: 460px;
+    height: 500px;
+  }
+ #home .spotlight h1.head{
+  font-size: 100px;
+ }
+ #home .spotlight h4{
+  font-size: 40px;
+ }
+ #home .spotlight p.content {
+  font-size:16px;
+ }
+ #home .spotlight .cards .card{
+  width: 200px;
+  padding: 30px;
+ }
+ #home .spotlight .cards .card h1 {
+  font-size: 40px;
+ }
+#home .spotlight .cards .card h5{
+  font-size: 20px;
+}
+#about h1.hehe{
+  font-size: 30px;
+}
+#about .main h1{
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+#about .main h4{
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+#about .main p{
+  font-size: 18px;
+  max-width: 700px;
+  letter-spacing: 2px;
+}
+#gallery .head h1{
+  font-size: 30px;
+}
+#gallery .head h3{
+  font-size: 64px;
+  letter-spacing: 4px;
+}
+#contact .main h1 {
+  font-size: 30px;
+}
+#contact .main .address .add a {
+  font-size: 20px;
+}
+#contact .add{
+  line-height: 60px;
+}
+#about.main p{
+  background-image: url(./assets/bg.png);
+}
+#about .wrapper .main p{
+  padding-top: 40px;
+}
+
+
+}
+
+
+#about . p{
+  background-image: url('./assets/bg.png') ;
+
+}

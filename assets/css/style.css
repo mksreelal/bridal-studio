@@ -1,34 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
-
-@font-face {
-  font-family: "roboto_monoregular";
-  src: url("./fonts/font3/robotomono-variablefont_wght-webfont.woff")
-      format("woff2"),
-    url("./fonts/font3/robotomono-variablefont_wght-webfont.woff2")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "baloo_2regular";
-  src: url("./fonts/font4/baloo2-regular-webfont.woff") format("woff2"),
-    url("./fonts/font4/baloo2-regular-webfont.woff2") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-@font-face {
-    font-family: 'FuturaLTW01-Book';
-    src: url('./fonts/font5/FuturaLTW01-Book.woff2') format('woff2'),
-        url('FuturaLTW01-Book.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nova+Round&display=swap");
 
 * {
   padding: 0px;
@@ -43,6 +15,10 @@ body {
   background-repeat: no-repeat;
   background-blend-mode: lighten;
   background-size: 100%, 100vh;
+  font-family: "Nova Round", cursive;
+}
+p {
+  font-size: 25px;
 }
 .wrapper {
   margin: 0 30px;
@@ -61,6 +37,12 @@ a {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  position: fixed;
+  left: 0px;
+  right: 0;
+  top: 0px;
+  z-index: 100000;
+  background-color: black;
 }
 nav h1.left img {
   width: 40px;
@@ -157,20 +139,36 @@ nav h1.left img {
   margin-bottom: 26vh;
 }
 #home .spotlight .header-slide {
-  height: 10px;
+  width: 80vh;
   position: fixed;
   right: 0px;
-  top: 30vh;
+  top: 20vh;
 }
 #home .spotlight .header-slide img {
   width: 100%;
   display: block;
-  opacity: 0.2;
+  opacity: 0.3;
 }
 #home .spotlight h1.head {
   font-size: 44px;
   text-transform: uppercase;
   font-weight: 400;
+  font-family: "Aclonica", sans-serif;
+  background-color: #fff;
+  background-image: linear-gradient(45deg, #464541, #f56600);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  transition: 2s all;
+  animation: textan 2s linear infinite alternate;
+  -webkit-transition: 2s all;
+  -moz-transition: 2s all;
+  -ms-transition: 2s all;
+  -o-transition: 2s all;
+  -webkit-animation: textan 2s linear infinite alternate;
 }
 #home .spotlight h4 {
   font-size: 22px;
@@ -240,21 +238,17 @@ nav h1.left img {
   position: relative;
 }
 #about .main h1 {
-  font-family: "cormorant_garamondlight";
   font-size: 30px;
 }
 #about .main h4 {
   font-size: 22px;
-  font-family: "cormorant_garamondlight";
   margin-bottom: 10px;
 }
 #about .main p {
-  font-family: 'FuturaLTW01-Book';
   font-size: 16px;
-  max-width: 400px;
+  max-width: 450px;
   margin: 30px 0;
   color: rgba(255, 255, 255, 0.61);
-  font-weight: 500;
 }
 #about .main a.button {
   display: inline-block;
@@ -298,8 +292,8 @@ nav h1.left img {
   margin-right: 5px;
 }
 #gallery .head h3 {
-  font-size: 22px;
-  font-family: "Alex Brush", cursive;
+  font-size: 24px;
+  text-transform: capitalize;
   font-weight: 900;
 }
 .swiper-container {
@@ -362,10 +356,10 @@ nav h1.left img {
   min-height: 20vh;
 }
 #contact .main .address .add a {
+  font-family: sans-serif;
   display: flex;
   padding: 10px;
   gap: 40px;
-  font-weight: 900;
   opacity: 0.8;
   font-size: 11px;
 }
@@ -425,13 +419,20 @@ nav h1.left img {
 }
 #contact .main .mail input[type="text"] {
   padding: 10px;
-  background: rgba(255, 255, 255, 0.562);
+  background: rgba(65, 65, 65, 0.562);
   border: none;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  color: #fff;
+  letter-spacing: 2px;
+  width: 70%;
+}
+input:active,
+input:focus {
+  outline: none;
 }
 #contact .main .mail input[type="text"]::placeholder {
   color: silver;
@@ -446,10 +447,6 @@ nav h1.left img {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-}
-#contact .location{
-  text-align: left;
-  line-height: 30px;
 }
 
 /* footer */
@@ -470,11 +467,7 @@ footer .content .right span {
 }
 
 /*  */
-@media screen and (min-width: 360px) {
-  #contact .main .mail input[type="text"] {
-    width: 70%;
-  }
-}
+
 @media screen and (min-width: 480px) {
   #home .spotlight {
     margin-top: 10%;
@@ -493,9 +486,6 @@ footer .content .right span {
   }
   #about .main p {
     margin: 0 auto;
-  }
-  #contact .main .mail input[type="text"] {
-    width: 20%;
   }
 
   /* contact */
@@ -574,7 +564,7 @@ footer .content .right span {
   #home .spotlight .header-slide img {
     width: 100vh;
   }
-   #home .spotlight h1.head{
+    #home .spotlight h1.head{
   font-size: 100px;
  }
  #home .spotlight h4{
@@ -625,21 +615,14 @@ footer .content .right span {
 #contact .add{
   line-height: 60px;
 }
-#about.main p{
-  background-image: url(./assets/bg.png);
+#contact .location{
+
+  line-height: 30px;
+  text-align: left;
 }
+
 #about .wrapper .main p{
   padding-top: 40px;
 }
-
+ 
 }
-<<<<<<< HEAD
-=======
-
-
-#about . p{
-  background-image: url('./assets/bg.png') ;
-
-}
-}
->>>>>>> 033a0daee1e5164e4423e450284cf42b7e70834a

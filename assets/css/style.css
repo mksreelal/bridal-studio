@@ -18,6 +18,35 @@
   font-style: normal;
 }
 
+@font-face {
+    font-family: 'cormorant_garamondlight';
+    src: url('./fonts/fontcormorantgaramond-light-webfont.woff2') format('woff2'),
+         url('./fonts/fontcormorantgaramond-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'cormorant_garamondregular';
+    src: url('./fonts/fontcormorantgaramond-regular-webfont.woff2') format('woff2'),
+         url('./fonts/fontcormorantgaramond-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'FuturaLTW01-Book';
+    src: url('./fonts/font5/FuturaLTW01-Book.woff2') format('woff2'),
+        url('FuturaLTW01-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 * {
   padding: 0px;
   margin: 0;
@@ -26,11 +55,14 @@
 body {
   font-size: 60%;
   font-family: sans-serif;
-  background-color: #b02757;
+  background: #000;
   color: rgba(255, 255, 255, 0.89);
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  background-size: 100%, 100vh;
 }
 .wrapper {
-  margin: 0 20px;
+  margin: 0 30px;
 }
 
 a {
@@ -141,6 +173,17 @@ nav h1.left img {
   font-family: "cormorant_garamondlight";
   margin-bottom: 26vh;
 }
+#home .spotlight .header-slide {
+  height: 10px;
+  position: fixed;
+  right: 0px;
+  top: 30vh;
+}
+#home .spotlight .header-slide img {
+  width: 100%;
+  display: block;
+  opacity: 0.2;
+}
 #home .spotlight h1.head {
   font-size: 44px;
   text-transform: uppercase;
@@ -177,7 +220,6 @@ nav h1.left img {
   font-family: sans-serif;
   z-index: 2;
   padding: 20px;
-  background-color: rgb(16 16 16 / 56%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -207,8 +249,8 @@ nav h1.left img {
   content: ":";
   width: 10px;
   height: 5px;
-  background-color: #5d5d47;
-  color: #5d5d47;
+  background-color: chartreuse;
+  color: chartreuse;
   margin-right: 5px;
 }
 #about .main {
@@ -224,12 +266,12 @@ nav h1.left img {
   margin-bottom: 10px;
 }
 #about .main p {
+  font-family: 'FuturaLTW01-Book';
   font-size: 16px;
   max-width: 400px;
   margin: 30px 0;
   color: rgba(255, 255, 255, 0.61);
   font-weight: 500;
-  background-image: url(./assets/bg.png);
 }
 #about .main a.button {
   display: inline-block;
@@ -331,22 +373,22 @@ nav h1.left img {
 }
 #contact .main .address .add {
   display: flex;
-  flex-direction: column;
-  margin-left: 40%;
-  transform: translate(-50%);
-  -webkit-transform: translate(-50%);
-  -moz-transform: translate(-50%);
-  -ms-transform: translate(-50%);
-  -o-transform: translate(-50%);
-  justify-content: space-between;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
   min-height: 20vh;
 }
 #contact .main .address .add a {
   display: flex;
+  padding: 10px;
   gap: 40px;
   font-weight: 900;
   opacity: 0.8;
   font-size: 11px;
+}
+#contact .main .address .map iframe {
+  width: 250px;
+  height: 250px;
 }
 #contact .main .address .add span img {
   width: 20px;
@@ -422,6 +464,10 @@ nav h1.left img {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+#contact .location{
+  text-align: left;
+  line-height: 30px;
+}
 
 /* footer */
 
@@ -438,6 +484,13 @@ footer .content {
 }
 footer .content .right span {
   font-family: "Alex Brush", cursive;
+}
+
+/*  */
+@media screen and (min-width: 360px) {
+  #contact .main .mail input[type="text"] {
+    width: 70%;
+  }
 }
 @media screen and (min-width: 480px) {
   #home .spotlight {
@@ -458,16 +511,11 @@ footer .content .right span {
   #about .main p {
     margin: 0 auto;
   }
+  #contact .main .mail input[type="text"] {
+    width: 20%;
+  }
 
   /* contact */
-  #contact .main .address .add {
-    margin-left: 55%;
-    transform: translate(-60%);
-    -webkit-transform: translate(-60%);
-    -moz-transform: translate(-60%);
-    -ms-transform: translate(-60%);
-    -o-transform: translate(-60%);
-  }
 }
 @media screen and (min-width: 640px) {
   .humburgar {
@@ -514,20 +562,18 @@ footer .content .right span {
 }
 
 @media screen and (min-width: 768px) {
-  #contact .main .address .add {
-    margin-left: 60%;
-    transform: translate(-60%);
-    -webkit-transform: translate(-60%);
-    -moz-transform: translate(-60%);
-    -ms-transform: translate(-60%);
-    -o-transform: translate(-60%);
-  }
   .wrapper {
     margin: 0 90px;
   }
   .swiper-container {
     width: 420px;
     height: 460px;
+  }
+  #home .spotlight .header-slide {
+    top: 10vh;
+  }
+  #home .spotlight .header-slide img {
+    width: 80vh;
   }
 }
 
@@ -538,19 +584,14 @@ footer .content .right span {
   #home .spotlight .cards .card {
     width: 200px;
   }
-  #contact .main .address .add {
-    margin-left: 63%;
-    transform: translate(-63%);
-    -webkit-transform: translate(-63%);
-    -moz-transform: translate(-63%);
-    -ms-transform: translate(-63%);
-    -o-transform: translate(-63%);
-  }
   .swiper-container {
     width: 460px;
     height: 500px;
   }
- #home .spotlight h1.head{
+  #home .spotlight .header-slide img {
+    width: 100vh;
+  }
+   #home .spotlight h1.head{
   font-size: 100px;
  }
  #home .spotlight h4{
@@ -607,12 +648,5 @@ footer .content .right span {
 #about .wrapper .main p{
   padding-top: 40px;
 }
-
-
-}
-
-
-#about . p{
-  background-image: url('./assets/bg.png') ;
 
 }

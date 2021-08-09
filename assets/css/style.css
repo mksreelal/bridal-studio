@@ -18,24 +18,7 @@
   font-style: normal;
 }
 
-@font-face {
-    font-family: 'cormorant_garamondlight';
-    src: url('./fonts/fontcormorantgaramond-light-webfont.woff2') format('woff2'),
-         url('./fonts/fontcormorantgaramond-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 
-}
-
-
-@font-face {
-    font-family: 'cormorant_garamondregular';
-    src: url('./fonts/fontcormorantgaramond-regular-webfont.woff2') format('woff2'),
-         url('./fonts/fontcormorantgaramond-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
 @font-face {
     font-family: 'FuturaLTW01-Book';
     src: url('./fonts/font5/FuturaLTW01-Book.woff2') format('woff2'),
@@ -650,3 +633,13 @@ footer .content .right span {
 }
 
 }
+<<<<<<< HEAD
+=======
+
+
+#about . p{
+  background-image: url('./assets/bg.png') ;
+
+}
+}
+>>>>>>> 033a0daee1e5164e4423e450284cf42b7e70834a
